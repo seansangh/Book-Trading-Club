@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+    <style>
+      .a5{background: silver}
+    </style>
+  </head>
+  <body>
+     <header>
+      <div class="nav">
+        
+      <ul>
+        <li class="a1">Book Exchange</li>
+        <li class="a2"><a href="https://far-sale.glitch.me/views/index.html">Books</a></li>
+        <li class="a3"><a href="https://far-sale.glitch.me/views/requests.html">Requests</a></li>
+        <li class="a4"><a href="https://far-sale.glitch.me/views/trades.html">Trades</a></li>
+        <li class="a5"><a href="https://far-sale.glitch.me/views/users.html">Users</a></li>        
+      </ul>
+      </div>
+      <ul class="d">
+        <li class="login"><a href="https://far-sale.glitch.me/views/login.html">Login</a></li>
+      </ul>
+    </header>
+    
+    <p class="u1">
+      Users
+    </p>
+
+    <main>
+      <div class="b4t" id="usurp">
+        
+          <!--<%= title %>--> 
+            <% for(var i=0; i < title.length; i++) { %>
+ <div class="row">
+   <div class="col-xs-12"> <b><a href="https://far-sale.glitch.me/views/profile.html?user=<%=title[i][0]%>"><%= title[i][0] %></a></b><br /><no style="color:gray">Location: </no>
+      <%= title[i][1] %><br /><br />
+      <%if( title[i][2]){ %>    <a1>Books: <%= title[i][2] %></a1>       <% } %>
+      <%if( title[i][3]){ %>    <a2>Incoming Requests: <%= title[i][3] %></a2>       <% } %>
+      
+      </div></div>
+            <% } %>
+          
+      </div>      
+     
+      
+    </main>
+  </body>
+</html>
