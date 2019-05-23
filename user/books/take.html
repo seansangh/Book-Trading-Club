@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">    
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script>
+$(document).ready(function(){
+  $("#requests").hover(function(){
+    $(this).css("background-color", "silver");
+    $('#myrequests').css('display','block');
+    }, function(){
+    $(this).css("background-color", "#f0f0f0");
+    $('#myrequests').css('display','none');
+  });
+  $("#ls").hover(function(){
+    $('.d2').css('display','inline');
+    }, function(){
+    $(this).css("background-color", "#f0f0f0");
+    $('.d2').css('display','none');
+  });
+});
+    </script>
+    <script src="/client.js" defer></script>
+
+    <style>
+    </style>
+  </head>
+  <body>
+     <header>
+      <div class="nav">
+        
+      <ul>
+        <li class="a1">Book Exchange</li>
+        <li class="a2"><a href="https://far-sale.glitch.me/user/books.html">Books</a></li>
+        <li class="a3" id="requests">Requests  <i class="fa fa-angle-down"></i>
+          <div id="myrequests">
+            <p id="r1" class="r"><a href="https://far-sale.glitch.me/user/requests.html">All Requests</a></p>
+            <p id="r2" class="r"><a href="https://far-sale.glitch.me/user/newrequests.html">Create Request</a></p>
+          </div>
+        </li>
+        <li class="a4"><a href="https://far-sale.glitch.me/user/trades.html">Trades</a></li>
+        <li class="a5"><a href="https://far-sale.glitch.me/user/users.html">Users</a></li>        
+      </ul>
+      </div>
+       
+    <div id="ls">
+      <ul class="d">
+        <li class="login" id="logout"><%=user %> <i class="fa fa-angle-down"></i>      </li>
+      </ul>
+      <div class="d2">
+       
+          <div id="mylogout">
+            <p id="l1" class="l"><a href="https://far-sale.glitch.me/user/profile.html">Profile</a></p>
+            <p id="l2" class="l"><a href="https://far-sale.glitch.me/user/edit.html">Edit Profile</a></p>
+            <p id="l3" class="l"><a href="https://far-sale.glitch.me/user/mybooks.html">My Books</a></p>
+            <p id="l4" class="l"><a href="https://far-sale.glitch.me/logout">Logout</a></p>
+          </div>  
+      </div>  </div>      
+    </header>
+      <div class="book1">
+        <p class="list ">            
+          <strong>Books</strong> <v>available for trade </v>
+        </p>  
+      </div>
+       
+    <main><form method="POST">
+      
+      <div class="b4t">
+        
+          <!--<%= title %>--> 
+            <% for(var i=0; i < title.length; i++) { %>
+ <div class="row"><div class="col-xs-2"> <input type="checkbox" name="a<%= i %>"  value="a<%= i %>" /></div>
+    <div class="col-xs-10"> <b><%= title[i][0] %></b><br /> <%= title[i][1] %><br />
+       from <a href="https://far-sale.glitch.me/user/profile.html?user=<%= title[i][2] %>"><%= title[i][2] %></a> in <%= title[i][3] %></div></div>
+            <% } %>
+            <% if(title.length==0) { %>
+ <div class="row"><div class="col-xs-2"> </div>
+    <div class="col-xs-10"> You currently have no books</div></div>
+            <% } %>  
+              
+     <div class="b4t2">
+        
+       <input type="submit" class="ubt1"></input>
+              
+      </div>              
+      </div>
+      </form>
+    </main>
+  </body>
+</html>
