@@ -1,0 +1,74 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+    <style>
+      @media(max-width:900px){
+        .d{background: silver}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        
+      <ul>
+        <li class="a1">Book Exchange</li>
+        <li class="a2"><a href="https://far-sale.glitch.me/views/index.html">Books</a></li>
+        <li class="a3"><a href="https://far-sale.glitch.me/views/requests.html">Requests</a></li>
+        <li class="a4"><a href="https://far-sale.glitch.me/views/trades.html">Trades</a></li>
+        <li class="a5"><a href="https://far-sale.glitch.me/views/users.html">Users</a></li>        
+      </ul>
+      </div>
+      <ul class="d">
+        <li class="login"><a href="https://far-sale.glitch.me/views/login.html">Login</a></li>
+      </ul>
+    </header>
+    
+      <div class="book2">
+        <ul class="list2">
+         <li><i class="fa fa-github"></i></li> <li class="mo"><mo><a href="https://far-sale.glitch.me/auth/github"><strong>Sign in with Github</strong></a></mo></li>
+        </ul>  
+      </div>    
+
+    <main>
+      <!--  <form action="https://far-sale.glitch.me/auth/github" method="POST">
+          <input type="text" name="in" value=<%= me%>>
+          <input type="submit">
+          <p>
+            The user is: <%= user%>
+          </p>
+          </p>
+        </form> -->
+    
+    </main>
+
+    <footer>
+    </footer>
+
+
+
+  </body>
+</html>
